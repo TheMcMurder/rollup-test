@@ -7,6 +7,7 @@
     "start": "rollup -c -w",
     "prestart": "rimraf dist",
     "build": "rimraf dist && rollup -c ./rollup.config.js --environment NODE_ENV:production",
+    "fix": "rimraf ./node_modules/ && yarn install",
     "mutate-modules": "node ./demo/mutate-modules.js"
   },
   "author": "",

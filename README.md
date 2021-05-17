@@ -3,7 +3,7 @@ Attempting to show off a potential bug in how rollup handles different types of 
 ## Setup
 - yarn install
 - yarn start
-- open http://localhost:10001/
+- open http://localhost:8888/
 - notice that there is not CSS included from `@adobe/react-spectrum`
 
 ## Getting CSS to be included
@@ -15,3 +15,9 @@ Each package.json needs to have `sideEffects: true` instead of `sideEffects: ['*
 - yarn install
 - yarn mutate-modules
 - yarn start
+
+After waiting for a successful build open http://localhost:8888/ and see that CSS was included
+
+## restoring mutated modules
+
+- yarn fix

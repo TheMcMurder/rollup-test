@@ -41,6 +41,7 @@ const config = {
     }),
     mode !== 'production' &&
       serve({
+        port: 8888,
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
