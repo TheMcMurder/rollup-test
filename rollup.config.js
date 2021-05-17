@@ -25,10 +25,6 @@ const config = {
     }),
     commonjs(),
     babel({
-      presets: [
-        "@babel/preset-env",
-        "@babel/preset-react",
-      ],
       exclude: 'node_modules/**',
       babelHelpers: 'runtime',
     }),
