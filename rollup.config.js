@@ -23,34 +23,33 @@ const config = {
     nodeResolve({
       browser: true,
     }),
-    commonjs(),
+    commonjs({include: /node_modules/}),
     babel({
       exclude: 'node_modules/**',
-      babelHelpers: 'runtime',
     }),
-    // emitEJS({
-    //   src: 'src',
-    // }),
-    // postcss({
-    //   extensions: ['.css'],
-    //   inject: {
-    //     insertAt: 'top',
-    //   },
-    // }),
-    // replace({
-    //   'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    // }),
-    // mode !== 'production' &&
-    //   serve({
-    //     headers: {
-    //       'Access-Control-Allow-Origin': '*',
-    //     },
-    //     contentBase: distDirectory,
-    //   }),
-    // mode !== 'production' &&
-    //   livereload({
-    //     watch: distDirectory,
-    //   }),
+    emitEJS({
+      src: 'src',
+    }),
+    postcss({
+      extensions: ['.css'],
+      inject: {
+        insertAt: 'top',
+      },
+    }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    }),
+    mode !== 'production' &&
+      serve({
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+        contentBase: distDirectory,
+      }),
+    mode !== 'production' &&
+      livereload({
+        watch: distDirectory,
+      }),
   ],
 };
 
