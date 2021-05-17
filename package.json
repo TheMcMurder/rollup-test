@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "rollup -c -w",
-    "build": "rimraf dist && rollup -c ./rollup.config.js --environment NODE_ENV:production"
+    "prestart": "rimraf dist",
+    "build": "rimraf dist && rollup -c ./rollup.config.js --environment NODE_ENV:production",
+    "mutate-modules": "node ./demo/mutate-modules.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-replace": "^2.4.2",
     "postcss": "^8.2.15",
+    "rimraf": "^3.0.2",
     "rollup": "^2.48.0",
     "rollup-plugin-emit-ejs": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
