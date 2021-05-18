@@ -19,7 +19,7 @@ Attempting to show off a potential bug in how rollup handles different types of 
 
 A few different changes are required to get the CSS to be bundled.
 
-Each package.json needs to have `sideEffects: true` instead of `sideEffects: ['*.css']` to make it easy to demonstrate run the following commands
+Each package.json needs to have `sideEffects: true` or `sideEffects: undefined` instead of `sideEffects: ['*.css']` to make it easy to demonstrate run the following commands
 
 - yarn install
 - yarn mutate-modules
