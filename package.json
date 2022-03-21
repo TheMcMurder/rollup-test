@@ -7,7 +7,7 @@
     "start": "rollup -c -w",
     "prestart": "rimraf dist",
     "build": "rimraf dist && rollup -c ./rollup.config.js --environment NODE_ENV:production",
-    "fix": "rimraf ./node_modules/ && yarn install",
+    "fix": "yarn install --force",
     "mutate-modules": "node ./demo/mutate-modules.js"
   },
   "author": "",
@@ -18,7 +18,7 @@
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
     "@rollup/plugin-babel": "5.3.1",
-    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-commonjs": "21.0.2",
     "@rollup/plugin-node-resolve": "13.1.3",
     "@rollup/plugin-replace": "4.0.0",
     "postcss": "^8.2.15",
@@ -26,7 +26,7 @@
     "rollup": "2.70.1",
     "rollup-plugin-emit-ejs": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-postcss": "4.0.2",
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2"
   },
